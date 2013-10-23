@@ -1,0 +1,7 @@
+<h1>Search results for: <%= @term %></h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li><%= movie.title %></li>
+  <% end %>
+</ul>

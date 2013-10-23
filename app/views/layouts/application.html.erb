@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reflix</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<%= link_to "New Movie", new_movie_path %>
+
+<%= form_for :movie, url: search_path, method: :get do |f| %>
+  <%= f.text_field :term, placeholder: 'Search' %>
+  <%= f.submit "Search" %>
+<% end %>
+
+
+
+</body>
+</html>
